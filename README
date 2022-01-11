@@ -69,8 +69,8 @@ matrix at a given index and displays them.
 
 ------------------------------------- 'P' -------------------------------------
 
-	Using the simple algorithm to display a matrix (two simply for loops) and
-displays the matrix found at the given index.
+	Using the simple algorithm to display a matrix (two simply for loops)
+and displays the matrix found at the given index.
 
 -------------------------------------------------------------------------------
 
@@ -97,8 +97,8 @@ the program adds (10^4 + 7) to the element.
 
 ------------------------------------- 'O' -------------------------------------
 
-	Memory is allocated for an array that will retain, on each position, the
-sum of the elements of each given matrix. Each element of the sum vector is
+	Memory is allocated for an array that will retain, on each position,
+the sum of the elements of each given matrix. Each element of the sum vector is
 computed modulo (10^4 + 7) and in case it is not positive, the program adds
 (10^4 + 7) to the element. Next, the sum vector is sorted using the selection
 sort method. Taking into account the previous sorting, both the indexes of
@@ -108,28 +108,28 @@ the matrices and the dimensions of the rows and columns arrays will be swapped.
 
 ------------------------------------- 'T' -------------------------------------
 
-	The purpose of this command is finding the transpose of the matrix found at
-an gived index. The tranpose is created by changing the initial matrix's rows
-with its columns. After that, the matrix is deleted, the values in the rows
-and columns vectors are swapped and the transpose is placed where the old
-matrix used to be.
+	The purpose of this command is finding the transpose of the matrix
+found at an gived index. The tranpose is created by changing the initial
+matrix's rows with its columns. After that, the matrix is deleted, the values
+in the rows and columns vectors are swapped and the transpose is placed where
+the old matrix used to be.
 
 -------------------------------------------------------------------------------
 
 ------------------------------------- 'F' -------------------------------------
 
-	At this command, the required function removes a matrix from the matrices
-array and shift the following ones to left, covering the empty left place
-found at the index where the previous matrix used to be. The number of matrices
-is decreased. Basically, this case is based on the algorithm of deleting an
-element from an array.
+	At this command, the required function removes a matrix from the
+matrices array and shift the following ones to left, covering the empty left
+place found at the index where the previous matrix used to be. The number of
+matrices is decreased. Basically, this case is based on the algorithm of
+deleting an element from an array.
 
 -------------------------------------------------------------------------------
 
 ------------------------------------- 'Q' -------------------------------------
 
-	In this case, all the memory that was previously dinamically allocated is
-freed and then the program exits.
+	In this case, all the memory that was previously dinamically allocated
+is freed and then the program exits.
 
 -------------------------------------------------------------------------------
 
