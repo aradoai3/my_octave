@@ -1,0 +1,147 @@
+					# Copyright 2021 Aradoaie Ioana-Maria
+							▄▄▄▀▀▀▀▀▀▀▀▀▄▄▄
+						▄▀               ▀▀▄▄
+						▄▀                    ▀▄
+						▄▀                       █
+						█                         █
+						▐                           █
+						█    ▀▀█▄▄▄   ▄▌            ▐
+						▌     ▌ ██▀█▀▀   ▄▄▄▄▄    ▌ ▐
+						▌     ▀▄▄▄▀      ▌ ▀███▄▄▀  ▐
+						▌                 ▀▄▄▄▄▀   ▄▌
+						▐    ▐▀                   ▄▀
+						█   ▌  ▄▀▀▀▄▄▄          ▄▀
+						█  ▀    ▄▄▄▄ ▀▀▌  ▌   █
+						▀▄         ▀   ▄▀  ▄▀
+							▀▄▄▄         ▄▄▀▀
+								▐▀▀▀▀▀▀▀▀▀
+								█
+						█▀▀█ █▀▀█ █▀▀ 　 █  █ █▀▀█ █  █
+						█▄▄█ █▄▄▀ █▀▀ 　 █▄▄█ █  █ █  █
+						▀  ▀ ▀ ▀▀ ▀▀▀ 　 ▄▄▄█ ▀▀▀▀  ▀▀▀
+					  █▀▀█ █▀▀ █▀▀█ █▀▀▄ ▀█▀  █▄  █  █▀▀█
+					  █▄▄▀ █▀▀ █▄▄█ █  █  █   █ █ █  █ ▄▄
+					  ▀ ▀▀ ▀▀▀ ▀  ▀ █▄▄▀ ▄█▄  █  ▀█  █▄▄█
+							█▀▄▀█  █▀▀▀ ▀█
+							█ █ █  █▀▀▀ █▀
+							█   █  █▄▄▄ ▄
+
+
+------------------------------- Short Descripton ------------------------------
+
+	Based on Octave functions, this program is a simulator that uses
+dynamic memory allocation in order to perform numerical calculations.
+The purpose of this program is to represent in memory a matrices array,
+which will be created, modified and deleted, based on the given commands.
+
+-------------------------------------------------------------------------------
+
+----------------------------------- Commands ----------------------------------
+
+'L' = Loads a matrix with given dimensions into memory
+'D' = Prints the dimensions of the matrix from a given index
+'P' = Printf the matrix located at a given index
+'C' = Resizes an matrix to new dimensions
+'M' = Performs the multiplication of two matrices using the basic algorithm
+'O' = Sorts the array of matrices according to the sum of the elements
+'T' = Creates the transpose of the matrix from a given index
+'F' = Frees (deletes) the matrix from a given index
+'Q' = Frees the memory previously allocated && stops compilling the program
+'S' = Performs the multiplication of two matrices using Strassen's algorithm
+
+-------------------------------------------------------------------------------
+
+------------------------------------- 'L' -------------------------------------
+
+	In this case, the program will load a matrix into memory by allocating
+memory for it, reading its dimensions and using a basic two for functions
+for reading the matrix's elements. The number of total matrices will be
+increased and the matrix will be added at the end of the matrices array.
+
+-------------------------------------------------------------------------------
+
+------------------------------------- 'D' -------------------------------------
+
+	Searches in the vectors for rows and columns for the dimensions of an
+matrix at a given index and displays them.
+
+-------------------------------------------------------------------------------
+
+------------------------------------- 'P' -------------------------------------
+
+	Using the simple algorithm to display a matrix (two simply for loops) and
+displays the matrix found at the given index.
+
+-------------------------------------------------------------------------------
+
+------------------------------------- 'C' -------------------------------------
+
+	Following the instructions given by two vectors of restrictions, the
+matrix found at a given index is resized. The new column and row numbers
+are given, and the old matrix is ​​cropped and replaced by the matrix obtained
+after the resize operation. Only the elements found at the intersections
+between the given rows and columns are kept in the new matrix, depending on
+the order given in the input.
+
+-------------------------------------------------------------------------------
+
+------------------------------------- 'M' -------------------------------------
+
+	This function performs the basic algorithm for multiplying two matrices.
+The number of the matrices placed in the matrices array is increased. The
+matrix obtained is stored at the end of the array. Each element of the
+resulting matrix is computed modulo (10^4 + 7) and, in case it's not positive,
+the program adds (10^4 + 7) to the element.
+
+-------------------------------------------------------------------------------
+
+------------------------------------- 'O' -------------------------------------
+
+	Memory is allocated for an array that will retain, on each position, the
+sum of the elements of each given matrix. Each element of the sum vector is
+computed modulo (10^4 + 7) and in case it is not positive, the program adds
+(10^4 + 7) to the element. Next, the sum vector is sorted using the selection
+sort method. Taking into account the previous sorting, both the indexes of
+the matrices and the dimensions of the rows and columns arrays will be swapped.
+
+-------------------------------------------------------------------------------
+
+------------------------------------- 'T' -------------------------------------
+
+	The purpose of this command is finding the transpose of the matrix found at
+an gived index. The tranpose is created by changing the initial matrix's rows
+with its columns. After that, the matrix is deleted, the values in the rows
+and columns vectors are swapped and the transpose is placed where the old
+matrix used to be.
+
+-------------------------------------------------------------------------------
+
+------------------------------------- 'F' -------------------------------------
+
+	At this command, the required function removes a matrix from the matrices
+array and shift the following ones to left, covering the empty left place
+found at the index where the previous matrix used to be. The number of matrices
+is decreased. Basically, this case is based on the algorithm of deleting an
+element from an array.
+
+-------------------------------------------------------------------------------
+
+------------------------------------- 'Q' -------------------------------------
+
+	In this case, all the memory that was previously dinamically allocated is
+freed and then the program exits.
+
+-------------------------------------------------------------------------------
+
+------------------------------------- 'S' -------------------------------------
+
+	Strassen's algorithm for matrix multiplication is based on Divide and
+Conquer method, being implemented through a recursive function. This method
+is harder to apply, but will compute faster than the naive algorithm. It will
+work only on matrices of size 2^n. The main idea is to divide each matrix
+into quarters until the size is equal to 1. On every step, each fourth is
+treated as an independent element and is used for addition and subtraction
+operations. When the matrix's dimension finally reaches 1, the result will
+be obtained and placed at the end of the matrices array.
+
+-------------------------------------------------------------------------------
